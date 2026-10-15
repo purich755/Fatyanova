@@ -100,4 +100,6 @@ sh tools/lh.sh                             # Lighthouse mobile против out/
 
 ## Деплой
 
-Vercel в РФ блокируется, поэтому демо для клиента лучше выкладывать на GitHub Pages. Сборка: `GITHUB_PAGES=true npm run build`, basePath `/Fatyanova` уже предусмотрен в `next.config.ts`. Workflow для Pages ещё не добавлен.
+Живёт на **https://purich755.github.io/Fatyanova/** (репозиторий https://github.com/purich755/Fatyanova). Vercel в РФ блокируется, поэтому выбран GitHub Pages.
+
+Каждый пуш в `main` запускает `.github/workflows/pages.yml`: `GITHUB_PAGES=true npm run build` (статический экспорт с basePath `/Fatyanova`) → `upload-pages-artifact` → `deploy-pages`. Сборка занимает около полутора минут.
