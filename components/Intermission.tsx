@@ -7,7 +7,7 @@ export default function Intermission() {
     <section className="join paper" id="join" data-tone="paper" aria-labelledby="join-title">
       <div className="wrap join-grid">
         <p className="join-k mono" data-rv>
-          Антракт
+          Антракт <span className="join-to">· {JOIN.to}</span>
         </p>
         <h2 className="h2 join-title" id="join-title" data-split>
           {lines(JOIN.title)}
@@ -20,6 +20,16 @@ export default function Intermission() {
             </li>
           ))}
         </ol>
+        <ul className="join-terms" aria-label="Условия работы" data-rv>
+          {JOIN.terms.map((t) => (
+            <li key={t} className="mono-sm">
+              {t}
+            </li>
+          ))}
+        </ul>
+        <p className="join-parents" data-rv>
+          {JOIN.parents}
+        </p>
         <div className="join-cta" data-rv>
           <a href="#contacts" className="btn btn--ink" data-magnet>
             {JOIN.cta} <span className="arr">→</span>

@@ -13,7 +13,7 @@ export default function Footer() {
           {PROGRAM.map((p) => (
             <li key={p.n}>
               <a href={p.href} className="link-u">
-                № {p.n} {p.title}
+                {p.insert ? p.title : `№ ${p.n} ${p.title}`}
               </a>
             </li>
           ))}
@@ -24,6 +24,13 @@ export default function Footer() {
           </a>
           <a href={SITE.vk} className="link-u mono-sm" target="_blank" rel="noopener noreferrer">
             ВКонтакте ↗
+          </a>
+          <a href={SITE.whatsapp} className="link-u mono-sm" target="_blank" rel="noopener noreferrer">
+            WhatsApp ↗
+          </a>
+          <span className="mono-sm">{SITE.max}</span>
+          <a href={`mailto:${SITE.email}`} className="link-u mono-sm">
+            {SITE.email}
           </a>
         </div>
       </div>

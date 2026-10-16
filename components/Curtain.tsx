@@ -89,6 +89,11 @@ export default function Curtain() {
         <div className="hero-dim" aria-hidden="true" />
 
         <div className="hero-copy wrap">
+          <a href="#next" className="hero-next mono-sm" data-hero-fade>
+            <span className="hero-next-dot" aria-hidden="true" />
+            {HERO.next}
+            <span aria-hidden="true">→</span>
+          </a>
           <p className="mono hero-kicker" data-hero-fade>
             {HERO.kicker}
           </p>

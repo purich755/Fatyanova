@@ -166,6 +166,9 @@ export default function CaseSiberia() {
               </span>
               <span className="case-cap-t">{CASE.frames[0].caption}</span>
             </div>
+            <a href="#next" className="link-u case-next">
+              Следующая программа — 2 мая 2027, День Победы <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </div>

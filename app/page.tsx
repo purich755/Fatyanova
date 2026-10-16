@@ -6,6 +6,7 @@ import Preloader from '@/components/Preloader';
 import Header from '@/components/Header';
 import Curtain from '@/components/Curtain';
 import ProgramIndex from '@/components/ProgramIndex';
+import NextProgram from '@/components/NextProgram';
 import ProducerWord from '@/components/ProducerWord';
 import StageSteps from '@/components/StageSteps';
 import Ribbon from '@/components/Ribbon';
@@ -38,6 +39,7 @@ export default function Page() {
       <main>
         <Curtain />
         <ProgramIndex />
+        <NextProgram />
         <ProducerWord />
         <StageSteps />
         <Ribbon id="a" variant="diag" />

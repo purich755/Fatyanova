@@ -94,7 +94,13 @@ export default function CurtainCall() {
             <a href={SITE.vk} className="btn" target="_blank" rel="noopener noreferrer" data-magnet>
               {FINALE.vkLabel} <span className="arr">↗</span>
             </a>
+            <a href={SITE.whatsapp} className="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+              {FINALE.waLabel} <span className="arr">↗</span>
+            </a>
           </div>
+          <p className="cc-alt mono-sm">
+            {SITE.max} · <a href={`mailto:${SITE.email}`} className="link-u">{SITE.email}</a>
+          </p>
           <p className="mono cc-city">{SITE.city}</p>
         </div>
       </div>

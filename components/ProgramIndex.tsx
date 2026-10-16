@@ -14,14 +14,15 @@ export default function ProgramIndex() {
             Программа <em>вечера</em>
           </h2>
           <p className="mono-sm program-note" data-rv>
-            Новосибирск · Москва · Санкт‑Петербург
+            Для руководителей и педагогов детских коллективов
+            <br /> из любых городов России
           </p>
         </div>
         <ol className="toc" aria-label="Содержание страницы">
           {PROGRAM.map((p) => (
             <li key={p.n} data-rv>
-              <a href={p.href} className="toc-row">
-                <span className="toc-n mono">№ {p.n}</span>
+              <a href={p.href} className={p.insert ? 'toc-row toc-row--insert' : 'toc-row'}>
+                <span className="toc-n mono">{p.insert ? p.n : `№ ${p.n}`}</span>
                 <span className="toc-t">{p.title}</span>
                 <span className="toc-dots" aria-hidden="true" />
                 <span className="toc-p mono" aria-hidden="true">

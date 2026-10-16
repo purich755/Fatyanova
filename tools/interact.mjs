@@ -145,6 +145,9 @@ async function run(vp, label, opts = {}) {
   await page.waitForTimeout(1500);
   const tel = await page.locator('.cc-phone').getAttribute('href');
   ok('телефон tel:', tel === 'tel:+79130060936');
+  const ch = await page.evaluate(() => [...document.querySelectorAll('#contacts a')].map((a) => a.getAttribute('href')));
+  ok('в финале VK, WhatsApp и почта', ['https://vk.ru/club231764263', 'https://wa.me/79130060936', 'mailto:89130060936@ya.ru'].every((h) => ch.includes(h)), ch.join(' '));
+  ok('вкладыш-анонс 2 мая', (await page.locator('#next .next-day').textContent()) === '2');
   const ov = await page.evaluate(() => ({ sw: document.documentElement.scrollWidth, iw: innerWidth }));
   ok('нет горизонтального скролла', ov.sw <= ov.iw, `${ov.sw}/${ov.iw}`);
   ok('нет ошибок в консоли', errs.length === 0, errs.slice(0, 3).join(' | '));

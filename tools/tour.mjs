@@ -16,6 +16,8 @@ const url = process.env.URL || 'http://localhost:8650/';
 const STOPS = [
   ['01-hero', '#top', 0],
   ['02-program', '#program', 0.02],
+  ['02b-next', '#next', 0.0],
+  ['17b-join-b', '#join', 0.5],
   ['03-word', '#word', 0.05],
   ['04-word-b', '#word', 0.45],
   ['05-path-a', '#path', 0.0],
